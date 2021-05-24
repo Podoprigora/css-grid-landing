@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = () => {
     return {
@@ -8,6 +9,10 @@ module.exports = () => {
             app: ['./src/index.js']
         },
         plugins: [
+            new MiniCssExtractPlugin({
+                filename: '[name].css',
+                chunkFilename: '[name].css'
+            }),
             new HtmlWebpackPlugin({
                 template: 'public/index.html'
             })
@@ -17,6 +22,9 @@ module.exports = () => {
             publicPath: '',
             filename: '[name]-[contenthash].js',
             chunkFilename: '[name]-[contenthash].js'
+        },
+        resolve: {
+            extensions: ['.js', '.jsx', '.json']
         },
         devtool: 'source-map',
         devServer: {
@@ -28,7 +36,7 @@ module.exports = () => {
         module: {
             rules: [
                 {
-                    test: /\.jsx?$/,
+                    test: /\.(js)x?$/,
                     exclude: /node_modules/,
                     use: [
                         {
@@ -39,6 +47,36 @@ module.exports = () => {
                                     '@babel/plugin-transform-runtime',
                                     '@babel/plugin-syntax-dynamic-import'
                                 ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.(css|scss)$/,
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {}
+                        },
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'resolve-url-loader'
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: true
                             }
                         }
                     ]
