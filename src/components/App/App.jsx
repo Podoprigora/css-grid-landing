@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { Basics, LayoutLineNumbers, LayoutLineNames, LayoutAreasNames } from '../Sandbox';
+
 const App = () => {
-    return <div>App</div>;
+    return <LayoutAreasNames />;
 };
 
 export { App };

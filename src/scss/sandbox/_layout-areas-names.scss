@@ -1,0 +1,54 @@
+// Is applied for small layouts (5 * 5 and less)
+.draft-layout-areas-names {
+	display: grid;
+	grid-template-rows: 10rem auto 1fr 10rem;
+	grid-template-columns: repeat(3, 1fr) 30rem;
+	// prettier-ignore
+	grid-template-areas: "header header header ."
+                         "extra1 extra2 extra3 sidebar"
+                         "main main main sidebar"
+                         "footer footer footer footer";
+
+	grid-gap: 2rem;
+
+	margin: 0 auto;
+	width: 100%;
+	max-width: 120rem;
+	min-height: 100vh;
+
+	& > * {
+		background-color: #9bc2db;
+	}
+
+	.header {
+		grid-area: header;
+	}
+
+	.footer {
+		grid-area: footer;
+	}
+
+	.content {
+		grid-area: main;
+	}
+
+	.sidebar {
+		grid-area: sidebar;
+	}
+
+	.extra-content {
+		min-height: 10rem;
+
+		&--1 {
+			grid-area: extra2;
+		}
+
+		&--2 {
+			grid-area: extra1;
+		}
+
+		&--3 {
+			grid-area: extra3;
+		}
+	}
+}

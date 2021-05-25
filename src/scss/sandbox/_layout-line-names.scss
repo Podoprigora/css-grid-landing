@@ -1,0 +1,42 @@
+.draft-layout-line-names {
+	display: grid;
+	grid-template-rows: [header-start] 10rem [header-end extra-content-start] auto [extra-content-end
+		main-start] 1fr [main-end footer-start] 10rem [footer-end];
+	grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 30rem [grid-end];
+
+	grid-gap: 2rem;
+
+	margin: 0 auto;
+	width: 100%;
+	max-width: 120rem;
+	min-height: 100vh;
+
+	& > * {
+		background-color: #9bc2db;
+	}
+
+	.header {
+		grid-row: header-start / header-end;
+		grid-column: col-start 1 / grid-end;
+	}
+
+	.footer {
+		grid-row: footer-start / footer-end;
+		grid-column: col-start 1 / grid-end;
+	}
+
+	.content {
+		grid-row: main-start / main-end;
+		grid-column: col-start 1 / col-end 3;
+	}
+
+	.sidebar {
+		grid-row: header-end / main-end;
+		grid-column: col-end 3 / grid-end;
+	}
+
+	.extra-content {
+		grid-row: extra-content-start / extra-content-end;
+		min-height: 10rem;
+	}
+}
