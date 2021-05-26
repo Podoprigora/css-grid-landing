@@ -1,0 +1,49 @@
+.draft-layout-advanced-features {
+	display: grid;
+	// grid-template-rows: repeat(2, min-content);
+	grid-template-rows: minmax(15rem, min-content);
+	grid-template-columns: min-content max-content;
+	grid-auto-rows: min-content;
+	grid-gap: 2rem;
+
+	margin: 0 auto;
+	width: 100%;
+	max-width: 120rem;
+
+	.item {
+		padding: 2rem;
+		font-weight: 700;
+
+		&--1 {
+			background-color: palegreen;
+		}
+
+		&--2 {
+			background-color: seagreen;
+		}
+
+		&--3 {
+			background-color: palevioletred;
+		}
+
+		&--4 {
+			background-color: papayawhip;
+		}
+
+		&--5 {
+			background-color: peachpuff;
+		}
+
+		&--6 {
+			background-color: powderblue;
+		}
+
+		&--7 {
+			background-color: purple;
+		}
+
+		&--8 {
+			background-color: rosybrown;
+		}
+	}
+}

@@ -1,9 +1,18 @@
 import React from 'react';
 
-import { Basics, LayoutLineNumbers, LayoutLineNames, LayoutAreasNames } from '../Sandbox';
+import {
+    Basics,
+    LayoutLineNumbers,
+    LayoutLineNames,
+    LayoutAreasNames,
+    LayoutImplicit,
+    LayoutAlignTracks,
+    LayoutAdvancedFeatures,
+    LayoutAutoFitFill
+} from '../Sandbox';
 
 const App = () => {
-    return <LayoutAreasNames />;
+    return <LayoutAutoFitFill />;
 };
 
 export { App };
