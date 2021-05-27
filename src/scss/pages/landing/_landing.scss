@@ -1,0 +1,58 @@
+.landing {
+	display: grid;
+	grid-template-rows: minmax(40rem, 70vh) repeat(5, minmax(8rem, min-content));
+	// prettier-ignore
+	grid-template-columns: 
+        [sidebar-start] 
+        8rem 
+        [sidebar-end main-start] 
+        minmax($grid-margins, 1fr) 
+        [center-start] 
+        repeat($grid-columns, [col-start] minmax(min-content, $grid-column-width) [col-end])
+        [center-end] 
+        minmax($grid-margins, 1fr)
+        [main-end];
+
+	&__sidebar {
+		grid-row: 1 / -1;
+		grid-column: sidebar-start / sidebar-end;
+		background-color: $color-primary-dark;
+	}
+
+	&__header {
+		grid-column: main-start / col-end 6;
+		background-color: $color-primary-darken-2;
+	}
+
+	&__top-realtors {
+		grid-column: col-start 7 / main-end;
+		background-color: $color-secondary;
+	}
+
+	&__features {
+		grid-column: center-start / center-end;
+	}
+
+	&__story-pictures {
+		grid-column: main-start / col-end 4;
+		background-color: $color-primary;
+	}
+
+	&__story-content {
+		grid-column: col-start 5 / main-end;
+		background-color: $color-gray-lighten;
+	}
+
+	&__homes {
+		grid-column: center-start / center-end;
+	}
+
+	&__gallery {
+		grid-column: main-start / main-end;
+	}
+
+	&__footer {
+		grid-column: main-start / main-end;
+		background-color: $color-secondary;
+	}
+}

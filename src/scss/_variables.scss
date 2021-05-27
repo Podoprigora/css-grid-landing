@@ -1,0 +1,61 @@
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+$color-primary-darken-1: #6d5d4b;
+$color-primary-darken-2: #54483a;
+
+$color-secondary: #000;
+
+$color-gray-lighten: #f9f7f6;
+$color-gray-light: #aaa;
+
+$font-family-primary: "Nutito", Arial, sans-serif;
+$font-family-secondary: 'Josefin Sans', Arial, sans-serif;
+$font-size: 1.4rem;
+$font-weight: 300;
+$line-height: 1.6;
+
+$body-color: $color-secondary;
+
+// Grid & spacing
+
+$spacer: .8rem;
+
+$spacing-scale-0: 0;
+$spacing-scale-1: $spacer * 0.25; // .2rem
+$spacing-scale-2: $spacer * 0.5; // .4rem
+$spacing-scale-3: $spacer * 0.75; // .6rem
+$spacing-scale-4: $spacer; // .8rem
+$spacing-scale-5: $spacer * 1.25; // 1rem
+$spacing-scale-6: $spacer * 1.5; // 1.2rem
+$spacing-scale-7: $spacer * 1.75; // 1.4rem
+$spacing-scale-8: $spacer * 2; // 1.6rem
+$spacing-scale-9: $spacer * 2.25; // 1.8rem
+$spacing-scale-10: $spacer * 2.5; // 2rem
+$spacing-scale-11: $spacer * 2.75; // 2.2rem
+$spacing-scale-12: $spacer * 3; // 2.4rem
+$spacing-scale-13: $spacer * 3.25; // 2.6rem
+$spacing-scale-14: $spacer * 3.5; // 2.8rem
+$spacing-scale-15: $spacer * 3.75; // 3rem
+$spacing-scale-16: $spacer * 4; // 3.2rem
+$spacing-scale-17: $spacer * 4.25; // 3.4rem
+$spacing-scale-18: $spacer * 4.5; // 3.6rem
+$spacing-scale-19: $spacer * 4.75; // 3.8rem
+$spacing-scale-20: $spacer * 5; // 4rem
+$spacing-scale-24: $spacer * 6; // 4.8rem
+
+$grid-columns: 8;
+$grid-column-width: 16rem;
+$grid-margins: $spacing-scale-20;
+
+// Heading
+$heading-1-font-size: $font-size * 2.5;
+$heading-2-font-size: $font-size * 2;
+$heading-3-font-size: $font-size * 1.75;
+$heading-4-font-size: $font-size * 1.5;
+$heading-5-font-size: $font-size * 1.25;
+$heading-6-font-size: $font-size;
+$heading-font-family: $font-family-secondary;
+$heading-font-weight: 400;
+$heading-color: inherit;
+$heading-line-height: inherit;
+$heading-gutter-bottom: $spacing-scale-6;

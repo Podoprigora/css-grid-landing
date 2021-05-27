@@ -1,18 +1,9 @@
 import React from 'react';
 
-import {
-    Basics,
-    LayoutLineNumbers,
-    LayoutLineNames,
-    LayoutAreasNames,
-    LayoutImplicit,
-    LayoutAlignTracks,
-    LayoutAdvancedFeatures,
-    LayoutAutoFitFill
-} from '../Sandbox';
+import { SiteMainPage } from '../site/SiteMainPage';
 
 const App = () => {
-    return <LayoutAutoFitFill />;
+    return <SiteMainPage />;
 };
 
 export { App };

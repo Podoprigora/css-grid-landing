@@ -1,0 +1,29 @@
+.landing__features {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(min-content, $grid-column-width * 2));
+	grid-column-gap: $grid-column-width;
+	grid-row-gap: $spacing-scale-20;
+	margin: 8rem 0;
+
+	.feature {
+		display: grid;
+		grid-template-rows: min-content 1fr;
+		grid-template-columns: minmax(5.4rem, min-content) 1fr;
+
+		&__icon {
+			grid-row: 1 / -1;
+			grid-column: 1 / 2;
+		}
+
+		&__title {
+			grid-row: 1 / 2;
+			grid-column: 2 / 3;
+			line-height: 1.2;
+		}
+
+		&__text {
+			grid-row: 2 / 3;
+			grid-column: 2 / 3;
+		}
+	}
+}

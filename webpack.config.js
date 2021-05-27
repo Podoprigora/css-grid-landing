@@ -14,7 +14,8 @@ module.exports = () => {
                 chunkFilename: '[name].css'
             }),
             new HtmlWebpackPlugin({
-                template: 'public/index.html'
+                template: 'public/index.html',
+                favicon: 'public/favicon.png'
             })
         ],
         output: {
