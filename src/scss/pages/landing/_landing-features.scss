@@ -1,4 +1,4 @@
-.landing__features {
+@mixin landing-features {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(min-content, $grid-column-width * 2));
 	grid-column-gap: $grid-column-width;

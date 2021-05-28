@@ -1,3 +1,5 @@
+@import './landing-features';
+
 .landing {
 	display: grid;
 	grid-template-rows: minmax(40rem, 70vh) repeat(5, minmax(8rem, min-content));
@@ -31,6 +33,8 @@
 
 	&__features {
 		grid-column: center-start / center-end;
+
+		@include landing-features;
 	}
 
 	&__story-pictures {
