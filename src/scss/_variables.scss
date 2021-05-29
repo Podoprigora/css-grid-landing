@@ -10,7 +10,10 @@ $color-gray-light: #aaa;
 
 $font-family-primary: "Nutito", Arial, sans-serif;
 $font-family-secondary: 'Josefin Sans', Arial, sans-serif;
-$font-size: 1.4rem;
+$font-size-small: 1.2rem;
+$font-size-medium: 1.4rem;
+$font-size-xmedium: 1.7rem;
+$font-size: $font-size-medium;
 $font-weight: 300;
 $line-height: 1.6;
 
@@ -48,11 +51,11 @@ $grid-column-width: 16rem;
 $grid-margins: $spacing-scale-20;
 
 // Heading
-$heading-1-font-size: $font-size * 2.5;
-$heading-2-font-size: $font-size * 2;
-$heading-3-font-size: $font-size * 1.75;
-$heading-4-font-size: $font-size * 1.5;
-$heading-5-font-size: $font-size * 1.25;
+$heading-1-font-size: 3.6rem;
+$heading-2-font-size: 2.8rem;
+$heading-3-font-size: 2.4rem;
+$heading-4-font-size: 2rem;
+$heading-5-font-size: 1.8rem;
 $heading-6-font-size: $font-size;
 $heading-font-family: $font-family-secondary;
 $heading-font-weight: 400;

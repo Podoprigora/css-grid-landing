@@ -1,29 +1,31 @@
 @mixin landing-features {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(min-content, $grid-column-width * 2));
+	grid-template-columns: repeat(auto-fit, minmax($grid-column-width * 2, 1fr));
 	grid-column-gap: $grid-column-width;
 	grid-row-gap: $spacing-scale-20;
+	align-items: start;
 	margin: 8rem 0;
 
 	.feature {
 		display: grid;
-		grid-template-rows: min-content 1fr;
-		grid-template-columns: minmax(5.4rem, min-content) 1fr;
+		grid-template-columns: min-content 1fr;
+		grid-column-gap: $spacing-scale-10;
 
 		&__icon {
-			grid-row: 1 / -1;
+			grid-row: 1 / span 2;
 			grid-column: 1 / 2;
+			color: $color-primary-dark;
+			width: 4.5rem;
+			height: 4.5rem;
 		}
 
 		&__title {
-			grid-row: 1 / 2;
-			grid-column: 2 / 3;
 			line-height: 1.2;
+			color: $color-primary-dark;
 		}
 
 		&__text {
-			grid-row: 2 / 3;
-			grid-column: 2 / 3;
+			font-size: $font-size-xmedium;
 		}
 	}
 }

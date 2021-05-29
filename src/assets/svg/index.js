@@ -1,13 +1,13 @@
-import Global32 from './global-32.svg';
-import Trophy34 from './trophy-34.svg';
-import MapPin32 from './map-pin-32.svg';
-import Lock32 from './lock-32.svg';
-import Key32 from './key-32.svg';
-import Presentation34 from './presentation-34.svg';
+import Global from './global.svg';
+import Trophy from './trophy.svg';
+import MapPin from './map-pin.svg';
+import Lock from './lock.svg';
+import Key from './key.svg';
+import Presentation from './presentation.svg';
 
-export const Global32Svg = Global32;
-export const Trophy34Svg = Trophy34;
-export const MapPin32Svg = MapPin32;
-export const Lock32Svg = Lock32;
-export const Key32Svg = Key32;
-export const Presentation34Svg = Presentation34;
+export const GlobalSvg = Global;
+export const TrophySvg = Trophy;
+export const MapPinSvg = MapPin;
+export const LockSvg = Lock;
+export const KeySvg = Key;
+export const PresentationSvg = Presentation;
