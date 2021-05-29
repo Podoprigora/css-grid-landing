@@ -1,0 +1,23 @@
+.btn {
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .4px;
+	font-weight: 600;
+	padding: $spacing-scale-6 $spacing-scale-12;
+	border-radius: .2rem;
+	transition: background-color .3s ease;
+
+	&--link {
+		display: inline-block;
+		text-decoration: none;
+	}
+
+	&--primary {
+		background-color: $color-primary;
+		color: #fff;
+
+		&:hover {
+			background-color: darken($color-primary, 10%);
+		}
+	}
+}

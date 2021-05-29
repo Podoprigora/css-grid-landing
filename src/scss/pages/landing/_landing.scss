@@ -1,8 +1,14 @@
+@use 'sass:math';
+
 @import './landing-features';
+@import './landing-story';
 
 .landing {
 	display: grid;
-	grid-template-rows: minmax(40rem, 70vh) repeat(5, minmax(8rem, min-content));
+	// prettier-ignore
+	grid-template-rows: 
+        minmax(40rem, 70vh) 
+        repeat(5, minmax(8rem, min-content));
 	// prettier-ignore
 	grid-template-columns: 
         [sidebar-start] 
@@ -39,12 +45,16 @@
 
 	&__story-pictures {
 		grid-column: main-start / col-end 4;
-		background-color: $color-primary;
+		background-color: $color-gray-lighten;
+		// background-color: $color-primary;
+		@include landing-story-pictures;
 	}
 
 	&__story-content {
 		grid-column: col-start 5 / main-end;
 		background-color: $color-gray-lighten;
+
+		@include landing-story-content;
 	}
 
 	&__homes {

@@ -1,0 +1,95 @@
+@use 'sass:math';
+
+@mixin landing-story-content {
+	display: flex;
+	align-items: center;
+
+	.story {
+		margin: 8rem math.div($grid-column-width, 2);
+		max-width: $grid-column-width * 3.5;
+
+		&__subtitle {
+			text-transform: uppercase;
+			color: $color-primary;
+		}
+
+		&__title,
+		&__text {
+			font-style: italic;
+		}
+
+		&__text {
+			font-size: $font-size-xmedium;
+		}
+
+		&__btn {
+			margin-top: $spacing-scale-14;
+		}
+	}
+}
+// Solution #1
+@mixin landing-story-pictures {
+	display: flex;
+	min-height: 40rem;
+
+	.story-picture {
+		flex: 1;
+		position: relative;
+		overflow: hidden;
+
+		&__base {
+			position: absolute;
+			bottom: 2rem;
+			right: 0;
+			width: 80%;
+			max-width: calc(60rem * .8);
+			height: 80%;
+			max-height: calc(36rem * .8);
+			border: .3rem solid rgba($color-primary, .6);
+			z-index: 0;
+		}
+
+		&__img-wrap {
+			position: absolute;
+			display: inline-block;
+			bottom: 4rem;
+			right: 2rem;
+			width: calc(100% - 4rem - #{$grid-margins});
+			height: 100%;
+			max-width: 60rem;
+			margin: .3rem;
+			line-height: 0;
+			z-index: 0;
+		}
+
+		&__img {
+			position: absolute;
+			display: inline-block;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			line-height: 0;
+			border-top-left-radius: 2rem;
+			box-shadow: .8rem .8rem .8rem -.4rem rgba(#000, .25);
+			z-index: 1;
+		}
+	}
+}
+
+// Solution #2
+// @mixin landing-story-pictures {
+// 	display: grid;
+// 	grid-template-rows: repeat(6, 1fr);
+// 	grid-template-columns: repeat(6, 1fr);
+// 	align-items: center;
+// 	min-height: 40rem;
+
+// 	.story-picture__img-wrap {
+// 		grid-row: 2 / 6;
+// 		grid-column: 2 / 6;
+// 	}
+
+// 	.story-picture__img {
+// 		width: 100%;
+// 	}
+// }

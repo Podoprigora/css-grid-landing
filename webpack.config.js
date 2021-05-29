@@ -81,6 +81,10 @@ module.exports = () => {
                             }
                         }
                     ]
+                },
+                {
+                    test: /\.(jpe?g|png)$/i,
+                    type: 'asset/resource'
                 }
             ]
         }
