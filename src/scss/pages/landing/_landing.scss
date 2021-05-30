@@ -2,6 +2,7 @@
 
 @import './landing-features';
 @import './landing-story';
+@import './landing-homes';
 
 .landing {
 	display: grid;
@@ -11,21 +12,13 @@
         repeat(5, minmax(8rem, min-content));
 	// prettier-ignore
 	grid-template-columns: 
-        [sidebar-start] 
-        8rem 
-        [sidebar-end main-start] 
+        [main-start] 
         minmax($grid-margins, 1fr) 
         [center-start] 
         repeat($grid-columns, [col-start] minmax(min-content, $grid-column-width) [col-end])
         [center-end] 
         minmax($grid-margins, 1fr)
         [main-end];
-
-	&__sidebar {
-		grid-row: 1 / -1;
-		grid-column: sidebar-start / sidebar-end;
-		background-color: $color-primary-dark;
-	}
 
 	&__header {
 		grid-column: main-start / col-end 6;
@@ -46,7 +39,7 @@
 	&__story-pictures {
 		grid-column: main-start / col-end 4;
 		background-color: $color-gray-lighten;
-		// background-color: $color-primary;
+
 		@include landing-story-pictures;
 	}
 
@@ -59,6 +52,8 @@
 
 	&__homes {
 		grid-column: center-start / center-end;
+
+		@include landing-homes;
 	}
 
 	&__gallery {

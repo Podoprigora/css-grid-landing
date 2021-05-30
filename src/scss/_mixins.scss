@@ -1,0 +1,51 @@
+@mixin truncation {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin disable-tap-highlight-color {
+	-webkit-tap-highlight-color: transparent;
+}
+
+// Breakpoints
+@mixin media-breakpoint-up($key, $offset: 0) {
+	$value: map-get($breakpoints, $key);
+
+	@if $value != null {
+		@if $value != 0 {
+			@if $offset != 0 {
+				$value: $value + $offset / 16;
+			}
+
+			@media only screen and (min-width: $value) {
+				@content;
+			}
+		} @else {
+			@content;
+		}
+	}
+}
+
+@mixin media-breakpoint-down($key) {
+	$value: map-get($breakpoints, $key);
+
+	@if $value != null {
+		@media only screen and (max-width: $value) {
+			@content;
+		}
+	}
+}
+
+@mixin media-hover {
+	@media (hover: hover) and (pointer: fine) {
+		@content;
+	}
+}
+
+@mixin media-not-hover {
+	@media (hover: none) {
+		@content;
+	}
+}

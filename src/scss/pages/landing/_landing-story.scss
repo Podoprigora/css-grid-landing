@@ -27,7 +27,7 @@
 		}
 	}
 }
-// Solution #1
+
 @mixin landing-story-pictures {
 	display: flex;
 	min-height: 40rem;
@@ -75,21 +75,3 @@
 		}
 	}
 }
-
-// Solution #2
-// @mixin landing-story-pictures {
-// 	display: grid;
-// 	grid-template-rows: repeat(6, 1fr);
-// 	grid-template-columns: repeat(6, 1fr);
-// 	align-items: center;
-// 	min-height: 40rem;
-
-// 	.story-picture__img-wrap {
-// 		grid-row: 2 / 6;
-// 		grid-column: 2 / 6;
-// 	}
-
-// 	.story-picture__img {
-// 		width: 100%;
-// 	}
-// }

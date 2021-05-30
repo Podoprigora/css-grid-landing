@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
 
+@import './functions';
 @import './variables';
 @import './mixins';
 @import './base';
 @import './typography';
-
+@import './utils';
 @import './components';
 @import './sandbox';
 

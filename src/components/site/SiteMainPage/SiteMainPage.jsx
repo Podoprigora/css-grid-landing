@@ -9,13 +9,11 @@ import {
     PresentationSvg
 } from '../../../assets/svg';
 
-import StoryImage from '../../../assets/images/house-2.jpeg';
+import { MainPageHomes } from './MainPageHomes';
 
 export const SiteMainPage = () => {
     return (
         <div className="landing">
-            <aside className="landing__sidebar">Sidebar</aside>
-
             <header className="landing__header">Header</header>
 
             <section className="landing__top-realtors">Realtors</section>
@@ -78,7 +76,11 @@ export const SiteMainPage = () => {
                 <div className="story-picture">
                     <div className="story-picture__base" />
                     <div className="story-picture__img-wrap">
-                        <img src={StoryImage} alt="Story house" className="story-picture__img" />
+                        <img
+                            src="/images/house-2.jpeg"
+                            alt="Story house"
+                            className="story-picture__img"
+                        />
                     </div>
                 </div>
             </section>
@@ -99,7 +101,9 @@ export const SiteMainPage = () => {
                 </div>
             </section>
 
-            <section className="landing__homes">Homes</section>
+            {/* Homes section */}
+
+            <MainPageHomes />
 
             <section className="landing__gallery">Gallery</section>
 

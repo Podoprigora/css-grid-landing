@@ -8,6 +8,8 @@ $color-secondary: #000;
 $color-gray-lighten: #f9f7f6;
 $color-gray-light: #aaa;
 
+$color-red: #f44336;
+
 $font-family-primary: "Nutito", Arial, sans-serif;
 $font-family-secondary: 'Josefin Sans', Arial, sans-serif;
 $font-size-small: 1.2rem;
@@ -18,6 +20,27 @@ $font-weight: 300;
 $line-height: 1.6;
 
 $body-color: $color-secondary;
+
+$border-radius-small: .2rem;
+$border-radius-medium: .5rem;
+$border-radius-large: 1rem;
+
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: px-to-em(576px);
+$breakpoint-md: px-to-em(768px);
+$breakpoint-lg: px-to-em(992px);
+$breakpoint-xl: px-to-em(1200px);
+$breakpoint-xxl: px-to-em(1400px);
+
+$breakpoints: (
+	"xs": $breakpoint-xs,
+	"sm": $breakpoint-sm,
+	"md": $breakpoint-md,
+	"lg": $breakpoint-lg,
+	"xl": $breakpoint-xl,
+	"xxl": $breakpoint-xxl
+);
 
 // Grid & spacing
 

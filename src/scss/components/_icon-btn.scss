@@ -1,0 +1,38 @@
+.icon-btn {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	color: currentColor;
+	background-color: transparent;
+	cursor: pointer;
+	border: 0;
+
+	&::after {
+		position: absolute;
+		content: "";
+		background-color: transparent;
+		border-radius: 50%;
+		top: -.6rem;
+		bottom: -.6rem;
+		left: -.6rem;
+		right: -.6rem;
+		transition: background-color .2s;
+		z-index: 0;
+	}
+
+	&:hover {
+		&::after {
+			background-color: rgba(#000, .08);
+		}
+	}
+
+	& > * {
+		position: relative;
+		color: currentColor;
+		width: 1.6rem;
+		height: 1.6rem;
+		z-index: 1;
+	}
+}

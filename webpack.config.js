@@ -31,7 +31,7 @@ module.exports = () => {
         devServer: {
             open: false,
             historyApiFallback: true,
-            contentBase: './',
+            contentBase: './public',
             port: 9015
         },
         module: {
