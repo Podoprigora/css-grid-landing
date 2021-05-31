@@ -57,7 +57,7 @@ const HomeTileInner = (props) => {
                     <li className="home-tile__feature">
                         <AreaSizeSvg className="home-tile__feature-icon" />
                         <span className="home-tile__feature-text home-tile__feature-text--strong u-text-nowrap">
-                            {area} m2
+                            {area} m<sub>2</sub>
                         </span>
                     </li>
                 )}
