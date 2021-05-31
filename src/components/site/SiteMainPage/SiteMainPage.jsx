@@ -9,6 +9,7 @@ import {
     PresentationSvg
 } from '../../../assets/svg';
 
+import { MainPageGallery } from './MainPageGallery';
 import { MainPageHomes } from './MainPageHomes';
 
 export const SiteMainPage = () => {
@@ -105,7 +106,9 @@ export const SiteMainPage = () => {
 
             <MainPageHomes />
 
-            <section className="landing__gallery">Gallery</section>
+            {/* Gallery section */}
+
+            <MainPageGallery />
 
             <footer className="landing__footer">Footer</footer>
         </div>

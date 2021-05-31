@@ -3,6 +3,7 @@
 @import './landing-features';
 @import './landing-story';
 @import './landing-homes';
+@import './landing-gallery';
 
 .landing {
 	display: grid;
@@ -58,10 +59,31 @@
 
 	&__gallery {
 		grid-column: main-start / main-end;
+		background-color: $color-gray-lighten;
+
+		@include landing-gallery;
 	}
 
 	&__footer {
 		grid-column: main-start / main-end;
 		background-color: $color-secondary;
+	}
+
+	&__section-header,
+	&__section-fbar {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__section-header {
+		margin-bottom: math.div($grid-column-width, 4);
+	}
+
+	&__section-title {
+		font-weight: 500;
+		text-transform: uppercase;
+		line-height: 1;
+		color: $color-primary;
+		margin-bottom: 0;
 	}
 }
