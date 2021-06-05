@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $color-primary: #c69963;
 $color-primary-dark: #b28451;
 $color-primary-darken-1: #6d5d4b;
@@ -73,6 +75,8 @@ $spacing-scale-24: $spacer * 6; // 4.8rem
 $grid-columns: 8;
 $grid-column-width: 16rem;
 $grid-margins: $spacing-scale-20;
+$container-max-width: $grid-column-width * $grid-columns;
+$container-gap: math.div($grid-column-width, 4);
 
 // Heading
 $heading-1-font-size: 4.8rem;

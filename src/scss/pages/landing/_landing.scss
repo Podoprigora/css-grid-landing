@@ -4,13 +4,14 @@
 @import './landing-story';
 @import './landing-homes';
 @import './landing-gallery';
+@import './landing-footer';
 
 .landing {
 	display: grid;
 	// prettier-ignore
 	grid-template-rows: 
         minmax(40rem, 70vh) 
-        repeat(5, minmax(8rem, min-content));
+        repeat(5,  min-content);
 	// prettier-ignore
 	grid-template-columns: 
         [main-start] 
@@ -67,6 +68,8 @@
 	&__footer {
 		grid-column: main-start / main-end;
 		background-color: $color-secondary;
+
+		@include landing-footer;
 	}
 
 	&__section-header,

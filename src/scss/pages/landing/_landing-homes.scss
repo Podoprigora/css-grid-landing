@@ -1,20 +1,17 @@
-@use 'sass:math';
-
 @mixin landing-homes {
-	$gap: math.div($grid-column-width, 4);
 	margin: 8rem 0;
 
 	.landing__section-body {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax($grid-column-width * 2, 1fr));
-		grid-gap: $gap;
+		grid-gap: $container-gap;
 	}
 
 	&-action-bar {
 		grid-column: 1 / -1;
 		display: flex;
 		justify-content: center;
-		margin-top: $gap;
+		margin-top: $container-gap;
 	}
 
 	.home-tile {

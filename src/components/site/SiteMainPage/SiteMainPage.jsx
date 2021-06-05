@@ -110,7 +110,10 @@ export const SiteMainPage = () => {
 
             <MainPageGallery />
 
-            <footer className="landing__footer">Footer</footer>
+            <footer className="footer landing__footer">
+                <span className="footer__date">{new Date().getFullYear()}</span>
+                <span className="footer__logo-name">Luxury Estate</span>
+            </footer>
         </div>
     );
 };

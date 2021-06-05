@@ -1,5 +1,4 @@
 @mixin landing-gallery {
-	$container-gap: math.div($grid-column-width, 4);
 	padding: 8rem $container-gap;
 
 	&-body {

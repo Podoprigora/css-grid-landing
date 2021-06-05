@@ -1,1 +1,13 @@
+@mixin landing-footer {
+	display: flex;
+	align-items: center;
+	color: $color-primary;
+	font-size: $font-size-medium;
+	font-weight: 600;
+	padding: $spacing-scale-2 $container-gap;
+	min-height: 8rem;
 
+	.footer__date {
+		margin-right: $spacing-scale-4;
+	}
+}
