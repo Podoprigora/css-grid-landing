@@ -1,16 +1,68 @@
 @use 'sass:math';
 
-@mixin landing-story-content {
-	display: flex;
-	align-items: center;
+@mixin landing-story {
+	padding: 0 $container-gap;
+
+	@include media-breakpoint-down('lg') {
+		display: flex;
+		padding-top: 8rem;
+		padding-bottom: 4rem;
+	}
 
 	.story {
-		margin: 8rem math.div($grid-column-width, 2);
-		max-width: $grid-column-width * 3.5;
+		$this: &;
+
+		display: flex;
+		align-items: center;
+		max-width: $container-max-width;
+		margin: 0 auto;
+
+		& > * {
+			flex: 1 1 50%;
+		}
+
+		&__picture {
+			display: grid;
+			grid-template-columns: repeat(4, minmax(min-content, $grid-column-width));
+			justify-items: end;
+			align-items: end;
+
+			position: relative;
+			align-self: stretch;
+
+			&-base {
+				grid-row: 1 / 2;
+				grid-column: 2 / -1;
+				position: relative;
+				width: 100%;
+				height: calc(80% - 4rem);
+				margin-bottom: 2rem;
+				border: .3rem solid rgba($color-primary, .6);
+				z-index: 0;
+			}
+
+			&-img {
+				grid-row: 1 / 2;
+				grid-column: 1 / -1;
+				position: relative;
+				width: calc(100% - 4rem);
+				margin: 4rem;
+				margin-right: 2rem;
+				border-top-left-radius: 2rem;
+				box-shadow: .8rem .8rem .8rem -.4rem rgba(#000, .25);
+				z-index: 1;
+			}
+		}
+
+		&__body {
+			padding: 4rem math.div($grid-column-width, 2);
+			padding-right: 0;
+		}
 
 		&__subtitle {
 			text-transform: uppercase;
 			color: $color-primary;
+			line-height: 1;
 		}
 
 		&__title,
@@ -18,60 +70,46 @@
 			font-style: italic;
 		}
 
+		&__title {
+			line-height: 1.2;
+		}
+
 		&__text {
 			font-size: $font-size-xmedium;
 		}
 
 		&__btn {
-			margin-top: $spacing-scale-14;
-		}
-	}
-}
-
-@mixin landing-story-pictures {
-	display: flex;
-	min-height: 40rem;
-
-	.story-picture {
-		flex: 1;
-		position: relative;
-		overflow: hidden;
-
-		&__base {
-			position: absolute;
-			bottom: 2rem;
-			right: 0;
-			width: 80%;
-			max-width: calc(60rem * .8);
-			height: 80%;
-			max-height: calc(36rem * .8);
-			border: .3rem solid rgba($color-primary, .6);
-			z-index: 0;
+			margin-top: 4rem;
 		}
 
-		&__img-wrap {
-			position: absolute;
-			display: inline-block;
-			bottom: 4rem;
-			right: 2rem;
-			width: calc(100% - 4rem - #{$grid-margins});
-			height: 100%;
-			max-width: 60rem;
-			margin: .3rem;
-			line-height: 0;
-			z-index: 0;
-		}
+		@include media-breakpoint-down('lg') {
+			flex-flow: column nowrap;
 
-		&__img {
-			position: absolute;
-			display: inline-block;
-			bottom: 0;
-			right: 0;
-			width: 100%;
-			line-height: 0;
-			border-top-left-radius: 2rem;
-			box-shadow: .8rem .8rem .8rem -.4rem rgba(#000, .25);
-			z-index: 1;
+			& > * {
+				flex: 1;
+			}
+
+			&__picture {
+				order: 1;
+				align-self: center;
+			}
+
+			&__body {
+				display: flex;
+				flex-flow: column nowrap;
+				padding-top: 0;
+				padding-left: 0;
+				padding-bottom: 0;
+
+				.story__subtitle {
+					text-align: center;
+					margin-bottom: 4rem;
+				}
+			}
+
+			&__btn {
+				align-self: center;
+			}
 		}
 	}
 }

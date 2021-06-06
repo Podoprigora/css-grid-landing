@@ -1,5 +1,5 @@
 @use "sass:math";
 
 @function px-to-em($size) {
-	@return math.div($size,16px) * 1em;
+	@return math.div($size, 16px) * 1em;
 }

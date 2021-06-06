@@ -10,8 +10,7 @@
 	display: grid;
 	// prettier-ignore
 	grid-template-rows: 
-        minmax(40rem, 70vh) 
-        repeat(5,  min-content);
+        minmax(40rem, 70vh);
 	// prettier-ignore
 	grid-template-columns: 
         [main-start] 
@@ -38,18 +37,11 @@
 		@include landing-features;
 	}
 
-	&__story-pictures {
-		grid-column: main-start / col-end 4;
+	&__story {
+		grid-column: main-start / main-end;
 		background-color: $color-gray-lighten;
 
-		@include landing-story-pictures;
-	}
-
-	&__story-content {
-		grid-column: col-start 5 / main-end;
-		background-color: $color-gray-lighten;
-
-		@include landing-story-content;
+		@include landing-story;
 	}
 
 	&__homes {
@@ -60,7 +52,6 @@
 
 	&__gallery {
 		grid-column: main-start / main-end;
-		background-color: $color-gray-lighten;
 
 		@include landing-gallery;
 	}

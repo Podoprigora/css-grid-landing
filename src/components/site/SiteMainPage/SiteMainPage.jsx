@@ -71,40 +71,40 @@ export const SiteMainPage = () => {
                 </div>
             </section>
 
-            {/* Story section */}
-
-            <section className="story-picture landing__story-pictures">
-                <div className="story-picture">
-                    <div className="story-picture__base" />
-                    <div className="story-picture__img-wrap">
-                        <img
-                            src="/images/house-2.jpeg"
-                            alt="Story house"
-                            className="story-picture__img"
-                        />
-                    </div>
-                </div>
-            </section>
-            <section className="landing__story-content">
-                <div className="story">
-                    <h5 className="story__subtitle">Happy Customers</h5>
-                    <h2 className="story__title">&ldquo;The best decision of our lives&rdquo;</h2>
-                    <p className="story__text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate labore
-                        nobis non eos veritatis aliquam ipsa molestias dolore tenetur amet animi,
-                        atque maiores quo, officia itaque dolorem magni reiciendis quaerat. Tenetur
-                        saepe, sint aliquam quam veniam, aperiam nobis accusamus laborum repellendus
-                        dolorum officiis.
-                    </p>
-                    <a href="#" className="btn btn--link btn--primary story__btn">
-                        Find your own home
-                    </a>
-                </div>
-            </section>
-
             {/* Homes section */}
 
             <MainPageHomes />
+
+            {/* Story section */}
+
+            <section className="landing__story landing__section">
+                <div className="story">
+                    <div className="story__picture">
+                        <div className="story__picture-base" />
+                        <img
+                            src="/images/house-2.jpeg"
+                            alt="Story house"
+                            className="story__picture-img"
+                        />
+                    </div>
+                    <div className="story__body">
+                        <h5 className="story__subtitle">Happy Customers</h5>
+                        <h2 className="story__title">
+                            &ldquo;The best decision of our lives&rdquo;
+                        </h2>
+                        <p className="story__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
+                            labore nobis non eos veritatis aliquam ipsa molestias dolore tenetur
+                            amet animi, atque maiores quo, officia itaque dolorem magni reiciendis
+                            quaerat. Tenetur saepe, sint aliquam quam veniam, aperiam nobis
+                            accusamus laborum repellendus dolorum officiis.
+                        </p>
+                        <a href="#" className="btn btn--link btn--primary story__btn">
+                            Find your own home
+                        </a>
+                    </div>
+                </div>
+            </section>
 
             {/* Gallery section */}
 
