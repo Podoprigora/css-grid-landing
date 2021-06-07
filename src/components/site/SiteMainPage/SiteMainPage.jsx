@@ -6,7 +6,8 @@ import {
     TrophySvg,
     LockSvg,
     KeySvg,
-    PresentationSvg
+    PresentationSvg,
+    MenuSvg
 } from '../../../assets/svg';
 import { Logo } from '../../Logo';
 
@@ -46,6 +47,10 @@ export const SiteMainPage = () => {
                             </a>
                         </li>
                     </ul>
+
+                    <button className="icon-btn icon-btn--medium landing__header-menu-btn">
+                        <MenuSvg />
+                    </button>
                 </nav>
                 <div className="landing__header-content">
                     <h1 className="landing__header-title">We Prowide You The Best Experience</h1>

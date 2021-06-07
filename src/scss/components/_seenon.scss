@@ -18,17 +18,24 @@
 
 	&__list {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(.1rem, 1fr));
 		grid-gap: $spacing-scale-14;
 		align-items: center;
-		justify-items: start;
-		margin-bottom: 8rem;
+		justify-items: center;
+
+		& > :first-child {
+			justify-self: start;
+		}
+
+		& > :last-child {
+			justify-self: end;
+		}
 	}
 
 	&__img {
 		display: block;
 		width: 100%;
-		max-width: 16rem;
+		max-width: 12rem;
 	}
 
 	&__link {

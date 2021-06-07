@@ -22,7 +22,17 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
+		align-items: center;
 		margin: $spacing-scale-4 auto;
+	}
+
+	&-menu-btn {
+		display: none;
+		color: $color-gray-light-2;
+
+		@include media-breakpoint-down("md") {
+			display: block;
+		}
 	}
 
 	&-links {
@@ -72,5 +82,9 @@
 
 	&-btn {
 		margin-top: $spacing-scale-14;
+	}
+
+	.seenon__list {
+		margin-bottom: 8rem;
 	}
 }
