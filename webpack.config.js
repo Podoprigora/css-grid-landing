@@ -1,14 +1,27 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = () => {
+module.exports = (w, config) => {
+    const { mode = 'development' } = config;
+    const isDev = mode === 'development';
+
     return {
-        mode: 'development',
+        mode,
         entry: {
             app: ['./src/index.js']
         },
         plugins: [
+            ...(!isDev ? [new CleanWebpackPlugin()] : []),
+            ...(!isDev
+                ? [
+                      new CopyWebpackPlugin({
+                          patterns: [{ from: './public/images', to: 'images' }]
+                      })
+                  ]
+                : []),
             new MiniCssExtractPlugin({
                 filename: '[name].css',
                 chunkFilename: '[name].css'
@@ -20,9 +33,9 @@ module.exports = () => {
         ],
         output: {
             path: path.resolve(__dirname, 'dist'),
-            publicPath: '',
             filename: '[name]-[contenthash].js',
-            chunkFilename: '[name]-[contenthash].js'
+            chunkFilename: '[name]-[contenthash].js',
+            assetModuleFilename: 'images/[hash][ext][query]'
         },
         resolve: {
             extensions: ['.js', '.jsx', '.json']

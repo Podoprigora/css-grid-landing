@@ -68,7 +68,7 @@ export const SiteMainPage = () => {
                         <li className="seenon__item">
                             <a href="#" className="seenon__link">
                                 <img
-                                    src="/images/logo-bbc.png"
+                                    src="images/logo-bbc.png"
                                     alt="BBC Logo"
                                     className="seenon__img"
                                 />
@@ -77,7 +77,7 @@ export const SiteMainPage = () => {
                         <li className="seenon__item">
                             <a href="#" className="seenon__link">
                                 <img
-                                    src="/images/logo-bi.png"
+                                    src="images/logo-bi.png"
                                     alt="Logo Bi"
                                     className="seenon__img"
                                 />
@@ -86,7 +86,7 @@ export const SiteMainPage = () => {
                         <li className="seenon__item">
                             <a href="#" className="seenon__link">
                                 <img
-                                    src="/images/logo-forbes.png"
+                                    src="images/logo-forbes.png"
                                     alt="Logo Forbes"
                                     className="seenon__img"
                                 />
@@ -95,7 +95,7 @@ export const SiteMainPage = () => {
                         <li className="seenon__item">
                             <a href="#" className="seenon__link">
                                 <img
-                                    src="/images/logo-techcrunch.png"
+                                    src="images/logo-techcrunch.png"
                                     alt="Logo Techcrunch"
                                     className="seenon__img"
                                 />
@@ -104,8 +104,6 @@ export const SiteMainPage = () => {
                     </ul>
                 </div>
             </header>
-
-            {/* <section className="landing__top-realtors">Realtors</section> */}
 
             {/* Features section */}
 
@@ -173,7 +171,7 @@ export const SiteMainPage = () => {
                     <div className="story__picture">
                         <div className="story__picture-base" />
                         <img
-                            src="/images/house-2.jpeg"
+                            src="images/house-2.jpeg"
                             alt="Story house"
                             className="story__picture-img"
                         />

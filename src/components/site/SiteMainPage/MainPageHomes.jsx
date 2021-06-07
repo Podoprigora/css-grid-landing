@@ -10,7 +10,7 @@ export const MainPageHomes = () => {
             </header>
             <div className="landing__section-body">
                 <HomeTile
-                    image="/images/house-1.jpeg"
+                    image="images/house-1.jpeg"
                     title="Modern Familiy Apartment"
                     price={1200000}
                     room={5}
@@ -18,7 +18,7 @@ export const MainPageHomes = () => {
                     address="3994 Lorem ipsum dolor sit amet consectetur adipisicing elit."
                 />
                 <HomeTile
-                    image="/images/house-2.jpeg"
+                    image="images/house-2.jpeg"
                     title="Modern Glass Villa"
                     price={2750000}
                     room={6}
@@ -27,7 +27,7 @@ export const MainPageHomes = () => {
                     addedToWishlist
                 />
                 <HomeTile
-                    image="/images/house-3.jpeg"
+                    image="images/house-3.jpeg"
                     title="Cozy Country House"
                     price={850000}
                     room={4}
@@ -35,7 +35,7 @@ export const MainPageHomes = () => {
                     address="3994 Lorem ipsum dolor sit amet consectetur adipisicing elit."
                 />
                 <HomeTile
-                    image="/images/house-4.jpeg"
+                    image="images/house-4.jpeg"
                     title="Large Rustical Villa"
                     price={1950000}
                     room={6}
@@ -43,7 +43,7 @@ export const MainPageHomes = () => {
                     address="3994 Lorem ipsum dolor sit amet consectetur adipisicing elit."
                 />
                 <HomeTile
-                    image="/images/house-5.jpeg"
+                    image="images/house-5.jpeg"
                     title="Majestic Palace House"
                     price={9500000}
                     room={18}
@@ -51,7 +51,7 @@ export const MainPageHomes = () => {
                     address="3994 Lorem ipsum dolor sit amet consectetur adipisicing elit."
                 />
                 <HomeTile
-                    image="/images/house-6.jpeg"
+                    image="images/house-6.jpeg"
                     title="Modern Familiy Apartment"
                     price={600000}
                     room={3}
