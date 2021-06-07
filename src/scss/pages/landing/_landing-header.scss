@@ -11,66 +11,12 @@
 	background-position: bottom;
 	padding: 0 $container-gap;
 
-	& > * {
+	&-nav,
+	&-content {
 		width: 100%;
 		max-width: $container-max-width;
 		margin-left: auto;
 		margin-right: auto;
-	}
-
-	&-nav {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		align-items: center;
-		margin: $spacing-scale-4 auto;
-	}
-
-	&-menu-btn {
-		display: none;
-		color: $color-gray-light-2;
-
-		& > * {
-			width: 24px;
-			height: 24px;
-		}
-
-		&:hover {
-			&::after {
-				background-color: rgba(#fff, .08);
-			}
-		}
-
-		@include media-breakpoint-down("md") {
-			display: flex;
-		}
-	}
-
-	&-links {
-		flex: 1;
-
-		display: grid;
-		grid-auto-flow: column;
-		justify-items: center;
-		align-items: center;
-		justify-content: end;
-		grid-gap: $spacing-scale-10;
-
-		@include media-breakpoint-down("md") {
-			display: none;
-		}
-	}
-
-	&-link {
-		&,
-		&:visited {
-			display: inline-block;
-			font-size: 1.5rem;
-			font-weight: 500;
-			letter-spacing: .4px;
-			text-transform: uppercase;
-			color: $color-gray-light-2;
-		}
 	}
 
 	&-content {

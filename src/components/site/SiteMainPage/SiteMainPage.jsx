@@ -6,109 +6,17 @@ import {
     TrophySvg,
     LockSvg,
     KeySvg,
-    PresentationSvg,
-    MenuSvg
+    PresentationSvg
 } from '../../../assets/svg';
-import { Logo } from '../../Logo';
-import { LazyImage } from '../../ui/LazyImage';
 
 import { MainPageGallery } from './MainPageGallery';
+import { MainPageHeader } from './MainPageHeader';
 import { MainPageHomes } from './MainPageHomes';
 
 export const SiteMainPage = () => {
     return (
         <div className="landing">
-            <header className="landing__header">
-                <nav className="landing__header-nav">
-                    <Logo />
-                    <ul className="landing__header-links">
-                        <li className="landing__header-link-item">
-                            <a href="#" className="link landing__header-link">
-                                Home
-                            </a>
-                        </li>
-                        <li className="landing__header-link-item">
-                            <a href="#" className="link landing__header-link">
-                                Services
-                            </a>
-                        </li>
-                        <li className="landing__header-link-item">
-                            <a href="#" className="link landing__header-link">
-                                Properties
-                            </a>
-                        </li>
-                        <li className="landing__header-link-item">
-                            <a href="#" className="link landing__header-link">
-                                Blog
-                            </a>
-                        </li>
-                        <li className="landing__header-link-item">
-                            <a href="#" className="link landing__header-link">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-
-                    <button className="icon-btn icon-btn--medium landing__header-menu-btn">
-                        <MenuSvg />
-                    </button>
-                </nav>
-                <div className="landing__header-content">
-                    <h1 className="landing__header-title">We Prowide You The Best Experience</h1>
-                    <div className="landing__header-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vitae,
-                        repudiandae quis iure quod voluptatum sit necessitatibus incidunt ratione
-                        facere ullam facilis quae, odit fuga blanditiis est expedita ipsum in.
-                        <div>
-                            <button className="btn btn--primary landing__header-btn">
-                                All Property
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="landing__header-seenon seenon">
-                    <h6 className="seenon__title">Seen on</h6>
-                    <ul className="seenon__list">
-                        <li className="seenon__item">
-                            <a href="#" className="seenon__link">
-                                <img
-                                    src="images/logo-bbc.png"
-                                    alt="BBC Logo"
-                                    className="seenon__img"
-                                />
-                            </a>
-                        </li>
-                        <li className="seenon__item">
-                            <a href="#" className="seenon__link">
-                                <img
-                                    src="images/logo-bi.png"
-                                    alt="Logo Bi"
-                                    className="seenon__img"
-                                />
-                            </a>
-                        </li>
-                        <li className="seenon__item">
-                            <a href="#" className="seenon__link">
-                                <img
-                                    src="images/logo-forbes.png"
-                                    alt="Logo Forbes"
-                                    className="seenon__img"
-                                />
-                            </a>
-                        </li>
-                        <li className="seenon__item">
-                            <a href="#" className="seenon__link">
-                                <img
-                                    src="images/logo-techcrunch.png"
-                                    alt="Logo Techcrunch"
-                                    className="seenon__img"
-                                />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </header>
+            <MainPageHeader />
 
             {/* Features section */}
 

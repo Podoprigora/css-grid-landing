@@ -1,0 +1,35 @@
+.sticky-header-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $color-secondary;
+	padding: 0 $container-gap;
+	box-shadow: 0 2px 8px 0px rgba(#000, .4);
+	z-index: 999;
+
+	& > * {
+		width: 100%;
+		max-width: $container-max-width;
+	}
+
+	&-enter {
+		opacity: 0;
+		transform: translateY(-50%);
+
+		&-active {
+			opacity: 1;
+			transform: translateY(0);
+			transition: all .3s;
+		}
+	}
+
+	&-exit {
+		opacity: 1;
+
+		&-active {
+			opacity: 0;
+			transition: all .15s;
+		}
+	}
+}
