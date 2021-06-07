@@ -30,8 +30,19 @@
 		display: none;
 		color: $color-gray-light-2;
 
+		& > * {
+			width: 24px;
+			height: 24px;
+		}
+
+		&:hover {
+			&::after {
+				background-color: rgba(#fff, .08);
+			}
+		}
+
 		@include media-breakpoint-down("md") {
-			display: block;
+			display: flex;
 		}
 	}
 

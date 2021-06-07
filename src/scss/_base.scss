@@ -16,7 +16,7 @@ html {
 	font-size: 62.5%;
 
 	@include media-breakpoint-down("md") {
-		font-size: 56.25%;
+		font-size: 50%;
 	}
 }
 
