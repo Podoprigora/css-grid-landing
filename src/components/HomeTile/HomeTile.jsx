@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import NumberFormat from 'react-number-format';
 
+import { LazyImage } from '../ui/LazyImage';
+
 import {
     AreaSizeSvg,
     ArrowRightSvg,
@@ -34,7 +36,14 @@ const HomeTileInner = (props) => {
     return (
         <div {...other} className={classNames('home-tile', className)}>
             <div className="home-tile__img-wrap">
-                <img src={image} alt={title} className="home-tile__img" />
+                <LazyImage
+                    src={image}
+                    alt={title}
+                    className="home-tile__img"
+                    placeholderComponent={
+                        <div className="image-placeholder home-tile__img-placeholder" />
+                    }
+                />
                 <button
                     className={classNames('icon-btn home-tile__btn-favorites', {
                         'home-tile__btn-favorites--selected': addedToWishlist

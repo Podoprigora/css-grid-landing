@@ -5,8 +5,9 @@
 		grid-gap: $spacing-scale-6;
 		align-items: center;
 		color: $color-gray-lighten;
-		font-size: $font-size-xmedium;
+		font-size: $font-size-medium;
 		font-weight: 400;
+		text-transform: uppercase;
 
 		&::after,
 		&::before {

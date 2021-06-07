@@ -10,6 +10,7 @@ import {
     MenuSvg
 } from '../../../assets/svg';
 import { Logo } from '../../Logo';
+import { LazyImage } from '../../ui/LazyImage';
 
 import { MainPageGallery } from './MainPageGallery';
 import { MainPageHomes } from './MainPageHomes';
@@ -58,8 +59,12 @@ export const SiteMainPage = () => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vitae,
                         repudiandae quis iure quod voluptatum sit necessitatibus incidunt ratione
                         facere ullam facilis quae, odit fuga blanditiis est expedita ipsum in.
+                        <div>
+                            <button className="btn btn--primary landing__header-btn">
+                                All Property
+                            </button>
+                        </div>
                     </p>
-                    <button className="btn btn--primary landing__header-btn">All Property</button>
                 </div>
 
                 <div className="landing__header-seenon seenon">

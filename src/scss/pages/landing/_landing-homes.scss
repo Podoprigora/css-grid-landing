@@ -47,9 +47,19 @@
 
 		&__img-wrap {
 			position: relative;
+			display: flex;
 			min-height: 20rem;
 			overflow: hidden;
 			z-index: 0;
+
+			& > * {
+				flex: 1;
+				display: flex;
+			}
+		}
+
+		&__img-placeholder {
+			flex: 1;
 		}
 
 		&__img {

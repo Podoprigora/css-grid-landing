@@ -1,0 +1,27 @@
+.image-placeholder {
+	position: relative;
+	background-color: darken($color-gray-lighten, 10%);
+	overflow: hidden;
+
+	&::after {
+		position: absolute;
+		content: "";
+		background-image: linear-gradient(to right, transparent, rgba(#fff, .5), transparent);
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transform: translateX(-100%);
+		z-index: 1;
+		animation: image-placeholder-animation 1.5s ease-out .5s infinite;
+	}
+}
+
+@keyframes image-placeholder-animation {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}

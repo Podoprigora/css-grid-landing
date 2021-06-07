@@ -1,5 +1,4 @@
-The project to showcase the ability to apply the css grid on the real project.  
-The main idea of design belongs to [Jonas Schmedtmann](https://www.udemy.com/user/jonasschmedtmann/)
+The project to showcase the ability to apply the css grid on the real project. 
 
 # Demo
 
