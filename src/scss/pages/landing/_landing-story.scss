@@ -62,7 +62,6 @@
 		&__subtitle {
 			text-transform: uppercase;
 			color: $color-primary;
-			line-height: 1;
 		}
 
 		&__title,
@@ -104,6 +103,7 @@
 				.story__subtitle {
 					text-align: center;
 					margin-bottom: 4rem;
+					line-height: 1;
 				}
 			}
 

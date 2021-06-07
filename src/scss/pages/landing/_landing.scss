@@ -1,5 +1,6 @@
 @use 'sass:math';
 
+@import './landing-header';
 @import './landing-features';
 @import './landing-story';
 @import './landing-homes';
@@ -10,7 +11,7 @@
 	display: grid;
 	// prettier-ignore
 	grid-template-rows: 
-        minmax(40rem, 70vh);
+        minmax(max-content, 70vh);
 	// prettier-ignore
 	grid-template-columns: 
         [main-start] 
@@ -22,17 +23,18 @@
         [main-end];
 
 	&__header {
-		grid-column: main-start / col-end 6;
-		background-color: $color-primary-darken-2;
+		grid-column: main-start / main-end;
+
+		@include landing-header;
 	}
 
 	&__top-realtors {
-		grid-column: col-start 7 / main-end;
-		background-color: $color-secondary;
+		grid-column: main-start / main-end;
 	}
 
 	&__features {
-		grid-column: center-start / center-end;
+		grid-column: main-start / main-end;
+		background-color: $color-gray-lighten;
 
 		@include landing-features;
 	}

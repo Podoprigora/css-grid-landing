@@ -1,10 +1,15 @@
 @mixin landing-features {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax($grid-column-width * 2, 1fr));
-	grid-column-gap: $grid-column-width;
-	grid-row-gap: $spacing-scale-20;
-	align-items: start;
-	margin: 8rem 0;
+	padding: 8rem $container-gap;
+
+	&-body {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax($grid-column-width * 2, 1fr));
+		grid-column-gap: $grid-column-width;
+		grid-row-gap: $spacing-scale-20;
+		align-items: start;
+		max-width: $container-max-width;
+		margin: 0 auto;
+	}
 
 	.feature {
 		display: grid;

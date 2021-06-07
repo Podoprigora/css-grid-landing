@@ -1,0 +1,44 @@
+.seenon {
+	&__title {
+		display: grid;
+		grid-template-columns: 1fr max-content 1fr;
+		grid-gap: $spacing-scale-6;
+		align-items: center;
+		color: $color-gray-lighten;
+		font-size: $font-size-xmedium;
+		font-weight: 400;
+
+		&::after,
+		&::before {
+			content: "";
+			height: 1px;
+			background-color: currentColor;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+		grid-gap: $spacing-scale-14;
+		align-items: center;
+		justify-items: start;
+		margin-bottom: 8rem;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		max-width: 16rem;
+	}
+
+	&__link {
+		& > img {
+			filter: brightness(70%);
+			transition: all .25s;
+		}
+
+		&:hover > img {
+			filter: none;
+		}
+	}
+}
