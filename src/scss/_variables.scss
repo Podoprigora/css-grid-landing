@@ -75,9 +75,9 @@ $spacing-scale-24: $spacer * 6; // 4.8rem
 
 $grid-columns: 8;
 $grid-column-width: 16rem;
-$grid-margins: $spacing-scale-20;
 $container-max-width: $grid-column-width * $grid-columns;
 $container-gap: math.div($grid-column-width, 4);
+$container-gap-small: math.div($grid-column-width, 8);
 
 // Heading
 $heading-1-font-size: 4.8rem;

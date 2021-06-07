@@ -1,6 +1,10 @@
 @mixin landing-features {
 	padding: 8rem $container-gap;
 
+	@include media-breakpoint-down("md") {
+		padding: 4rem $container-gap-small;
+	}
+
 	&-body {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax($grid-column-width * 2, 1fr));

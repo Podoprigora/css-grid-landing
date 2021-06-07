@@ -1,6 +1,10 @@
 @mixin landing-gallery {
 	padding: 8rem $container-gap;
 
+	@include media-breakpoint-down("md") {
+		padding: 4rem $container-gap-small;
+	}
+
 	&-body {
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);

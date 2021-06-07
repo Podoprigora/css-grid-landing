@@ -11,6 +11,10 @@
 	background-position: bottom;
 	padding: 0 $container-gap;
 
+	@include media-breakpoint-down("md") {
+		padding: 0 $container-gap-small;
+	}
+
 	&-nav,
 	&-content {
 		width: 100%;
@@ -48,6 +52,10 @@
 
 	&-seenon {
 		margin-bottom: 8rem;
+
+		@include media-breakpoint-down("md") {
+			margin-bottom: 4rem;
+		}
 
 		& > * {
 			max-width: 80rem;

@@ -8,6 +8,10 @@
 	box-shadow: 0 2px 8px 0px rgba(#000, .4);
 	z-index: 999;
 
+	@include media-breakpoint-down("md") {
+		padding: 0 $container-gap-small;
+	}
+
 	& > * {
 		width: 100%;
 		max-width: $container-max-width;

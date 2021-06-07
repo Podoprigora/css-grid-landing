@@ -9,6 +9,10 @@
 		padding-bottom: 4rem;
 	}
 
+	@include media-breakpoint-down("md") {
+		padding: 4rem $container-gap-small 2rem;
+	}
+
 	.story {
 		$this: &;
 

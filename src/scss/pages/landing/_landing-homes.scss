@@ -1,10 +1,18 @@
 @mixin landing-homes {
 	margin: 8rem 0;
 
+	@include media-breakpoint-down("md") {
+		margin: 4rem 0;
+	}
+
 	.landing__section-body {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax($grid-column-width * 2, 1fr));
 		grid-gap: $container-gap;
+
+		@include media-breakpoint-down("md") {
+			grid-gap: $container-gap-small;
+		}
 	}
 
 	&-action-bar {
@@ -12,6 +20,10 @@
 		display: flex;
 		justify-content: center;
 		margin-top: $container-gap;
+
+		@include media-breakpoint-down("md") {
+			margin-top: $container-gap-small;
+		}
 	}
 
 	.home-tile {

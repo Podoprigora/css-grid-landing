@@ -7,20 +7,28 @@
 @import './landing-gallery';
 @import './landing-footer';
 
+@mixin grid-template-columns($free-space: $container-gap) {
+	// prettier-ignore
+	grid-template-columns: 
+        [main-start] 
+        minmax($free-space, 1fr) 
+        [center-start] 
+        repeat($grid-columns, [col-start] minmax(min-content, $grid-column-width) [col-end])
+        [center-end] 
+        minmax($free-space, 1fr)
+        [main-end];
+}
+
 .landing {
 	display: grid;
 	// prettier-ignore
 	grid-template-rows: 
         minmax(max-content, 70vh);
-	// prettier-ignore
-	grid-template-columns: 
-        [main-start] 
-        minmax($grid-margins, 1fr) 
-        [center-start] 
-        repeat($grid-columns, [col-start] minmax(min-content, $grid-column-width) [col-end])
-        [center-end] 
-        minmax($grid-margins, 1fr)
-        [main-end];
+	@include grid-template-columns;
+
+	@include media-breakpoint-down("md") {
+		@include grid-template-columns($container-gap-small);
+	}
 
 	&__header {
 		grid-column: main-start / main-end;
@@ -72,7 +80,7 @@
 	}
 
 	&__section-header {
-		margin-bottom: math.div($grid-column-width, 4);
+		margin-bottom: $container-gap;
 	}
 
 	&__section-title {

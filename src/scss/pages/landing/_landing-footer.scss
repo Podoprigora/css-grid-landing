@@ -7,6 +7,10 @@
 	padding: $spacing-scale-2 $container-gap;
 	min-height: 8rem;
 
+	@include media-breakpoint-down("md") {
+		padding: $spacing-scale-2 $container-gap-small;
+	}
+
 	.footer__date {
 		margin-right: $spacing-scale-4;
 	}
