@@ -55,7 +55,7 @@ export const SiteMainPage = () => {
                 </nav>
                 <div className="landing__header-content">
                     <h1 className="landing__header-title">We Prowide You The Best Experience</h1>
-                    <p className="landing__header-text">
+                    <div className="landing__header-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vitae,
                         repudiandae quis iure quod voluptatum sit necessitatibus incidunt ratione
                         facere ullam facilis quae, odit fuga blanditiis est expedita ipsum in.
@@ -64,7 +64,7 @@ export const SiteMainPage = () => {
                                 All Property
                             </button>
                         </div>
-                    </p>
+                    </div>
                 </div>
 
                 <div className="landing__header-seenon seenon">

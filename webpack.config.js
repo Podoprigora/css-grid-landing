@@ -18,7 +18,11 @@ module.exports = (w, config) => {
             ...(!isDev
                 ? [
                       new CopyWebpackPlugin({
-                          patterns: [{ from: './public/images', to: 'images' }]
+                          patterns: [
+                              { from: './public/images', to: 'images' },
+                              { from: './public/favicons', to: 'favicons' },
+                              { from: './public/site.webmanifest' }
+                          ]
                       })
                   ]
                 : []),
@@ -27,8 +31,7 @@ module.exports = (w, config) => {
                 chunkFilename: '[name].css'
             }),
             new HtmlWebpackPlugin({
-                template: 'public/index.html',
-                favicon: 'public/favicon.png'
+                template: 'public/index.html'
             })
         ],
         output: {
