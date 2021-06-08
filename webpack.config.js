@@ -44,6 +44,7 @@ module.exports = (w, config) => {
             extensions: ['.js', '.jsx', '.json']
         },
         optimization: {
+            usedExports: true,
             runtimeChunk: 'single',
             moduleIds: 'deterministic',
             splitChunks: {

@@ -1,0 +1,54 @@
+.mobile-nav {
+	flex: 1;
+	display: grid;
+	grid-template-rows: max-content 1fr;
+	background-color: $color-secondary-light-1;
+	width: 80vw;
+
+	@include media-breakpoint-down('sm') {
+		width: 96vw;
+	}
+
+	&__close-btn {
+		color: $color-gray-light-2;
+
+		& > * {
+			width: 24px;
+			height: 24px;
+		}
+
+		&:hover {
+			&::after {
+				background-color: rgba(#fff, .08);
+			}
+		}
+	}
+
+	&__header {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		align-items: center;
+		height: 58px;
+		margin: 0 2rem;
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+	}
+
+	&__links {
+		display: grid;
+		grid-auto-flow: row;
+		justify-items: center;
+		align-items: center;
+		justify-content: center;
+		grid-gap: $spacing-scale-20;
+		color: $color-gray-light;
+
+		.link {
+			font-size: $font-size-large;
+		}
+	}
+}

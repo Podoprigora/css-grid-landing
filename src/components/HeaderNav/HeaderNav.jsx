@@ -1,48 +1,42 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { Logo } from '../Logo';
 import { MenuSvg } from '../../assets/svg';
+import { Logo } from '../Logo';
+import { HeaderNavLinks } from './HeaderNavLinks';
+import { HeaderSwipeableDrawer } from './HeaderSwipeableDrawer';
 
 const HeaderNav = React.forwardRef(function HeaderNav(props, forwardedRef) {
-    const { open, className, ...other } = props;
+    const { className, ...other } = props;
+    const [openDrawer, setOpenDrawer] = useState(false);
+
+    const handleOpenDrawer = useCallback(() => {
+        setOpenDrawer(true);
+    }, [setOpenDrawer]);
+
+    const handleCloseDrawer = useCallback(() => {
+        setOpenDrawer(false);
+    }, [setOpenDrawer]);
 
     return (
         <nav {...other} className={classNames('header-nav', className)} ref={forwardedRef}>
             <Logo />
 
-            <ul className="header-nav__links">
-                <li className="header-nav__link-item">
-                    <a href="#" className="link header-nav__link">
-                        Home
-                    </a>
-                </li>
-                <li className="header-nav__link-item">
-                    <a href="#" className="link header-nav__link">
-                        Services
-                    </a>
-                </li>
-                <li className="header-nav__link-item">
-                    <a href="#" className="link header-nav__link">
-                        Properties
-                    </a>
-                </li>
-                <li className="header-nav__link-item">
-                    <a href="#" className="link header-nav__link">
-                        Blog
-                    </a>
-                </li>
-                <li className="header-nav__link-item">
-                    <a href="#" className="link header-nav__link">
-                        Contact
-                    </a>
-                </li>
-            </ul>
+            <HeaderNavLinks />
 
-            <button className="icon-btn icon-btn--medium header-nav__menu-btn">
+            <button
+                className="icon-btn icon-btn--medium header-nav__menu-btn"
+                onClick={handleOpenDrawer}
+            >
                 <MenuSvg />
             </button>
+
+            <HeaderSwipeableDrawer
+                open={openDrawer}
+                onOpen={handleOpenDrawer}
+                onClose={handleCloseDrawer}
+            />
         </nav>
     );
 });

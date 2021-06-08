@@ -6,6 +6,7 @@ $color-primary-darken-1: #6d5d4b;
 $color-primary-darken-2: #54483a;
 
 $color-secondary: #000;
+$color-secondary-light-1: lighten($color-secondary, 10%);
 
 $color-gray-lighten: #f9f7f6;
 $color-gray-light-2: darken($color-gray-lighten, 4%);

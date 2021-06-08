@@ -11,6 +11,7 @@ import Favorite from './favorite.svg';
 import FavoriteOutline from './favorite_outline.svg';
 import ArrowRight from './arrow-right.svg';
 import Menu from './menu.svg';
+import Close from './close.svg';
 
 export const GlobalSvg = Global;
 export const TrophySvg = Trophy;
@@ -25,3 +26,4 @@ export const FavoriteSvg = Favorite;
 export const FavoriteOutlineSvg = FavoriteOutline;
 export const ArrowRightSvg = ArrowRight;
 export const MenuSvg = Menu;
+export const CloseSvg = Close;
