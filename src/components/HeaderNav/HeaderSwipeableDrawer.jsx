@@ -8,6 +8,7 @@ import { CloseSvg } from '../../assets/svg';
 
 const HeaderSwipeableDrawer = (props) => {
     const { open, onOpen, onClose, ...other } = props;
+
     const isTablet = useMediaQuery('(max-width: 768px)');
 
     const handleOpenDrawer = useCallback(() => {
