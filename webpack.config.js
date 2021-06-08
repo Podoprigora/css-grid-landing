@@ -43,13 +43,34 @@ module.exports = (w, config) => {
         resolve: {
             extensions: ['.js', '.jsx', '.json']
         },
-        devtool: 'source-map',
-        devServer: {
-            open: false,
-            historyApiFallback: true,
-            contentBase: './public',
-            port: 9015
+        optimization: {
+            runtimeChunk: 'single',
+            moduleIds: 'deterministic',
+            splitChunks: {
+                cacheGroups: {
+                    vendor: {
+                        test: /[\\/]node_modules[\\/]/,
+                        name: 'vendors',
+                        chunks: 'all'
+                    },
+                    styles: {
+                        test: /\.css$/,
+                        name: 'styles',
+                        chunks: 'all',
+                        enforce: true
+                    }
+                }
+            }
         },
+        ...(isDev && {
+            devtool: 'source-map',
+            devServer: {
+                open: false,
+                historyApiFallback: true,
+                contentBase: './public',
+                port: 9015
+            }
+        }),
         module: {
             rules: [
                 {
